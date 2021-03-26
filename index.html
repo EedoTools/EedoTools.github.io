@@ -15,7 +15,7 @@
       <span>sTiny.link</span>
     </div>
     <div id='mainFrame'>
-      <div id='contentFrame' style='display:block; width:90%;'>
+      <div id='contentFrame' style='display:block;'>
         <div id='content' style='display:block; max-width:750px; overflow-y:auto;'>
           <div style='height:40px;'></div>
           the content goes here
@@ -36,18 +36,21 @@
       id('sidebar').style.width = '360px'
       id('mainFrame').style.width = 'calc(100% - 360px)'
       id('mainFrame').style.height = '100%'
+      id('mainFrame').style.width = '90%'
     }else if(document.body.offsetWidth > 775){
       id('topbar').style.display = 'none'
       id('sidebar').style.display = 'flex'
       id('sidebar').style.width = '280px'
       id('mainFrame').style.width = 'calc(100% - 280px)'
       id('mainFrame').style.height = '100%'
+      id('mainFrame').style.width = '85%'
     }else{
       id('topbar').style.display = 'flex'
       id('sidebar').style.display = 'none'
       id('sidebar').style.width = '0px'
       id('mainFrame').style.width = '100%'
       id('mainFrame').style.height = 'calc(100% - 75px)'
+      id('mainFrame').style.width = '90%'
     }
   }
   function id(elementId){
