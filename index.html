@@ -9,7 +9,7 @@
     <div id='topbar' style='height:75px; background:#2d2d2d; color:white;'>
       <b style='font-size:175%; margin:1em 0;'>Eedo Tools</b>
     </div>
-    <div id='sidebar' class='vertical' style='background:#2d2d2d; color:white;'>
+    <div id='sidebar' class='vertical' style='background:#2d2d2d; color:white; overflow:hidden;'>
       <b style='font-size:175%; margin:1em 0;'>Eedo Tools</b>
       <span>파란페이 (ParahnPay)</span>
       <span>sTiny.link</span>
@@ -30,21 +30,18 @@
   function resizeSidebar(){
     if(document.body.offsetWidth > 925){
       id('topbar').style.display = 'none'
-      id('sidebar').style.display = 'flex'
       id('sidebar').style.width = '360px'
       id('mainFrame').style.width = 'calc(100% - 360px)'
       id('mainFrame').style.height = '100%'
       id('contentFrame').style.width = '90%'
     }else if(document.body.offsetWidth > 775){
       id('topbar').style.display = 'none'
-      id('sidebar').style.display = 'flex'
       id('sidebar').style.width = '280px'
       id('mainFrame').style.width = 'calc(100% - 280px)'
       id('mainFrame').style.height = '100%'
       id('contentFrame').style.width = '95%'
     }else{
       id('topbar').style.display = 'flex'
-      id('sidebar').style.display = 'none'
       id('sidebar').style.width = '0px'
       id('mainFrame').style.width = '100%'
       id('mainFrame').style.height = 'calc(100% - 75px)'
