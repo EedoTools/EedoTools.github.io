@@ -1,8 +1,11 @@
-<div id='sidebar' style='height:100%; background:#2d2d2d;'>
-</div>
-<div id='mainFrame' style='height:100%'>
-</div>
-
+<html>
+  <body>
+    <div id='sidebar' style='height:100%; background:#2d2d2d;'>
+    </div>
+    <div id='mainFrame' style='height:100%'>
+    </div>
+  </body>
+  
 <script>
   resizeSidebar()
   window.addEventListener('resize', function(){
@@ -10,15 +13,12 @@
   })
   function resizeSidebar(){
     if(document.body.offsetWidth > 925){
-      alert('1')
       id('sidebar').style.width = '360px'
       id('mainFrame').style.width = 'calc(100% - 360px)'
     }else if(document.body.offsetWidth > 775){
-      alert('2')
       id('sidebar').style.width = '280px'
       id('mainFrame').style.width = 'calc(100% - 280px)'
     }else{
-      alert('3')
       id('sidebar').style.width = '0px'
       id('mainFrame').style.width = 'calc(100%)'
     }
@@ -43,3 +43,5 @@
     border: none;
   }
 </style>
+
+</html>
