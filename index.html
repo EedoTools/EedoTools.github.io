@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   </head>
   
-  <body>
-    <div id='sidebar' style='height:100%; background:#2d2d2d;'>
-      <p>Eedo Tools</p>
+  <body style='max-width:1500px; max-height:850px;'>
+    <div id='sidebar' style='background:#2d2d2d;'>
+      <b style='font-size:150%'>Eedo Tools</b>
     </div>
-    <div id='mainFrame' style='height:100%'>
+    <div id='mainFrame'>
+      <div id='contentFrame' style='display:block;'>
+        <div id='content' style='max-width:750px; background:red;'>
+        </div>
+      </div>
     </div>
   </body>
-  
+
 <script>
   resizeSidebar()
   window.addEventListener('resize', function(){
@@ -22,33 +26,19 @@
     if(document.body.offsetWidth > 925){
       id('sidebar').style.width = '360px'
       id('mainFrame').style.width = 'calc(100% - 360px)'
+      id('contentFrame').style.width = '90%'
     }else if(document.body.offsetWidth > 775){
       id('sidebar').style.width = '280px'
       id('mainFrame').style.width = 'calc(100% - 280px)'
+      id('contentFrame').style.width = '95%'
     }else{
       id('sidebar').style.width = '0px'
       id('mainFrame').style.width = 'calc(100%)'
+      id('contentFrame').style.width = '90%'
     }
   }
   function id(elementId){
     return document.getElementById(elementId)
   }
 </script>
-
-<style>
-  html, body, div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-</style>
-
 </html>
