@@ -57,6 +57,13 @@
       id('contentFrame').style.width = '90%'
     }
   }
+  id('sidebarButton').addEventListener('click', function(){
+    if(id('sidebar').style.display = 'none'){
+      id('sidebar').style.display = 'flex'
+    }else{
+      id('sidebar').style.display = 'none'
+    }
+  })
   function id(elementId){
     return document.getElementById(elementId)
   }
