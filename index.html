@@ -1,13 +1,37 @@
 <div style='display:flex; width:100%; height:100%;'>
-  <div style='width:360px; height:100%; background:#2d2d2d;'>
+  <div id='sidebar' style='height:100%; background:#2d2d2d;'>
 
   </div>
-  <div style='width:calc(100% - 360px); height:100%'>
+  <div id='mainFrame' style='height:100%'>
 
   </div>
 </div>
+
+<script>
+  resizeSidebar()
+  window.addEventListener('resize', function(){
+    resizeSidebar()
+  })
+  function resizeSidebar(){
+    if(document.body.offsetwidth > 925){
+      id('sidbar').style.width = '360px'
+      id('mainFrame').style.width = 'calc(100% - 360px)'
+    }else if(document.body.offsetwidth > 775){
+      id('sidbar').style.width = '280px'
+      id('mainFrame').style.width = 'calc(100% - 280px)'
+    }else{
+      id('sidbar').style.width = '0px'
+      id('mainFrame').style.width = 'calc(100%)'
+    }
+  }
+  function id(elementId){
+    return document.getElementById(elementId)
+  }
+</script>
+
 <style>
-  html, body{
+  html, body, div{
+    display:flex;
     width:100%;
     height:100%;
   }
